@@ -1,0 +1,12 @@
+bool searchHorizontal(char *.....){
+    
+    bool .... = false; 
+
+    .... (int i = 0; i < rows; i++){
+        .... (strstr(words[i],....) || strstr(reverse(words[i]),...)){
+            .... = true;
+            break;    
+        }
+    }
+    return ....;
+}
