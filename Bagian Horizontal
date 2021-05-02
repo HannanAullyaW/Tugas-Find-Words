@@ -2,7 +2,7 @@ bool searchHorizontal(char *carikata){
     
     bool .... = false; 
 
-    .... (int i = 0; i < rows; i++){
+    for (int i = 0; i < rows; i++){
 
         
         if (strstr(words[i],....) || strstr(reverse(words[i]),....)){
