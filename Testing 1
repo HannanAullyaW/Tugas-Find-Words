@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+const int cols = 16, rows = 15;
+
+ char words[rows][cols] = {"tgbwwinterwsesn",
+                                "aaunttmmhfoodnb",
+                                "jlwcqldzmpmvdmr",
+                                "asagmquwvvbsohi",
+                                "bwplotanadtpgnc",
+                                "rewngodjcpnatnk",
+                                "eeotwosbqharrsa",
+                                "azcgeswewnaknpb",
+                                "dinnerqodlwdcar",
+                                "onopkwmparktzcc",
+                                "qbfrogmamwpweey",
+                                "lqzqnnmrzjjsclg",
+                                "mosgzczetdbooto",
+                                "pdcrzmsngrdnrpz",
+                                "ohnkzwaterjgtra"};
+
+char *getWordVertical(int Index);
+char *reverse(char *Words);
+bool searchVertical(char *Words);
+bool searchHorizontal(char *Words);
+
+
+int main()
+{
+    char word[16];
+    int n;
+    
+    cin>>n;
+    for (int i=0;i<n;i++){
+        cin.getline(word,16,'\n');
+        if (searchVertical(word) || searchHorizontal(word))
+            cout << "Ada\n";
+        else 
+            cout << "Tidak Ada\n";
+    }
+    return 0;
+}
+
+char *getWordVertical(int Index){
+	static char wordcol[cols];
+	while(int i = 0){
+		 i < rows; i++;
+		wordcol[i] = *(*(words+i)+Index);
+	} return wordcol;
+} 
