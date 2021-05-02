@@ -1,0 +1,13 @@
+bool searchVertical(char *carikata){
+    bool posisi = false;
+
+    for (int i = 0; i < cols-1; i++){      
+        char *chrCol = getWordVertical(i);
+       		 if (strstr(chrCol,carikata) || strstr(reverse(chrCol),carikata)){
+           		 posisi = true;
+            		break;
+        }
+    }
+
+    return posisi;
+}
