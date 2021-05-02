@@ -6,8 +6,4 @@ bool searchVertical(char *carikata){
        		 if (strstr(chrCol,carikata) || strstr(reverse(chrCol),carikata){
                  posisi = true;
             		break;
-        }
-    }
-
-    return posisi;
-}
+ 
