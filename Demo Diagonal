@@ -52,4 +52,11 @@ bool searchDiagonal(char * word){
                     }
                     if(ada){
                         return true;
-                    
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
+
