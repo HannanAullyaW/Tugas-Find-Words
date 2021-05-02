@@ -1,0 +1,8 @@
+char *getWordVertical(int bagian){
+    static char carikataCol[cols];
+    for (int i = 0; i < rows; i++){
+        carikataCol[i] = *(*(words+i)+bagian);
+    }
+
+    return carikataCol;
+}
