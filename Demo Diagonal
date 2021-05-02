@@ -1,0 +1,61 @@
+bool searchDiagonal(char * word){
+    bool ada;
+    char firstWord = word[0];
+    int wordLen = strlen(word);
+    //Sequential search
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            if (words[i][j] == firstWord) {
+                //ke arah kanan bawah
+                if(j+wordLen < cols && i+wordLen < rows){
+                    ada = true;
+                    for(int k=0;k<wordLen&&ada;k++){
+                        if(words[i+k][j+k] != word[k]){
+                            ada = false;
+                        }
+                    }
+                    if(ada){
+                        return true;
+                    }
+                }
+                //Ke arah kiri bawah
+                if(j-wordLen >= 0 && i+wordLen < rows){
+                    ada = true;
+                    for(int k=0;k<wordLen&&ada;k++){
+                        if(words[i+k][j-k] != word[k]){
+                            ada = false;
+                        }
+                    }
+                    if(ada){
+                        return true;
+                    }
+                }
+                //ke arah kanan atas
+                if(j+wordLen < cols && i-wordLen >= 0){
+                    ada = true;
+                    for(int k=0;k<wordLen&&ada;k++){
+                        if(words[i-k][j+k] != word[k]){
+                            ada = false;
+                        }
+                    }
+                    if(ada){
+                        return true;
+                    }
+                }
+                //Ke arah kiri atas
+                if(j-wordLen >= 0 && i-wordLen >= 0){
+                    ada = true;
+                    for(int k=0;k<wordLen&&ada;k++){
+                        if(words[i-k][j-k] != word[k]){
+                            ada = false;
+                        }
+                    }
+                    if(ada){
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
