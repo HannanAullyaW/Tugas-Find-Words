@@ -6,5 +6,5 @@ char *reverse(char *carikata){
         bagian2++;
     }
 
-    return carikarakter;
+  return carikarakter;
 }
