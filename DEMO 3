@@ -95,7 +95,7 @@ bool searchHorizontal(char * word){
             }
         }
     }
-    return false;
+    return false ;
 }
 
 int main()
