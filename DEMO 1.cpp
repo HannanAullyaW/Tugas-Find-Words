@@ -85,7 +85,7 @@ void Search()
 		 else{
 		 	cout<<"Tidak Ada"<<endl;
 		 }
-//       if (searchVertical(word) || searchHorizontal(word))
+//if(searchVertical(word) || searchHorizontal(word))
 //            cout << "Ada\n";
 //        else 
 //            cout << "Tidak Ada\n";
