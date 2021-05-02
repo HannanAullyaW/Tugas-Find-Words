@@ -1,14 +1,14 @@
 bool searchHorizontal(char *carikata){
-    
-    bool .... = false; 
+    // kondisi status awal
+    bool posisi = false; 
 
     for (int i = 0; i < rows; i++){
 
-        
-        if (strstr(words[i],....) || strstr(reverse(words[i]),....)){
-            .... = true;
+        // mencari kata ada atau tidak ada
+        if (strstr(words[i],carikata) || strstr(reverse(words[i]),carikata)){
+            posisi = true;
             break;    
         }
     }
-    return ....;
+    return posisi;
 }
